@@ -1,0 +1,16 @@
+{
+  "name": "educy",
+  "version": "1.0.0",
+  "description": "automation testing using cypress (learn)",
+  "main": "index.js",
+  "author": "arinichaerunnisa",
+  "license": "MIT",
+
+"scripts": {
+  "cy:open": "cypress open"
+},
+
+  "devDependencies": {
+    "cypress": "^13.13.0"
+  }
+}
