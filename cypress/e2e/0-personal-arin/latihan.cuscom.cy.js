@@ -24,15 +24,10 @@ describe('working with inputs', () => {
         cy.fixture("latihanuser").then(user => {
             const username = user.username
             const password = user.password
-            cy.get('#user_login').clear()
-            cy.get('#user_login').type('username')
-
-            cy.get('input[name=user_password]').clear()
-            cy.get('input[name=user_password]').type('password')
-
-            cy.get('input[name=submit]').click() 
+            cy.login(username, password)
 
             cy.get('#online_statements_tab').should('contain.text', 'Online Statements')
+           
 
         })
         })
