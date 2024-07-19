@@ -1,0 +1,15 @@
+{
+  "name": "eduwork_secenam",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "arinichaerunnisa",
+  "license": "MIT",
+  "sripts": {
+    "cy:open" : "cypress open",
+    "cy:run" : "cpress run"
+  }, 
+  "devDependencies": {
+    "cypress": "^13.13.1",
+    "prettier": "^3.3.3"
+  }
+}
