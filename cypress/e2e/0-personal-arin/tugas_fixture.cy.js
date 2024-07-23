@@ -3,10 +3,7 @@ describe('working with inputs', () => {
     it('visit the website', () => {
         cy.visit('http://zero.webappsecurity.com/login.html')
         cy.url().should('include', 'login.html')
-    });
-    
-    it('should try to login', () => {
-        cy.visit('http://zero.webappsecurity.com/login.html')
+
         cy.fixture("latihanuser").then(latihanuser => {
             const username = latihanuser.username
             const password = latihanuser.password
@@ -22,8 +19,9 @@ describe('working with inputs', () => {
             
             cy.get('input[name="submit"]').click()
             cy.get('.brand').should('contain.text', 'Zero Bank')
-                       
-        })
+
+        
+    })
         })
           
 })

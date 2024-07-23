@@ -5,11 +5,12 @@ describe('Searchbox Test', function() {
     cy.visit('http://zero.webappsecurity.com/login.html')
   })
 
-it('should type into searchbox and submit', () => {
-    cy.get('input[name="searchTerm"]').type('some text{enter}')
+it.only('should type into searchbox and submit', () => {
+    cy.get('id=searchTerm').type('online{enter}')
    })
 
-it ('should show search result page', () => {
-    cy.get('h2').should('contains.text', 'Search Results:')
-})
+it('should show search result page', () => {
+       cy.get('h2').contains('Search Results:')
+   })
+
 })
