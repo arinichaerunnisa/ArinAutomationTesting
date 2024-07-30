@@ -35,6 +35,8 @@ Cypress.Commands.add('login', (username, password) => {
 })
 
 Cypress.Commands.add('payment', (payment) => {
+    cy.clearCookies()
+    cy.clearLocalStorage()
     cy.get('.span4').should('have.value', 'sprint')
     cy.get('#sp_account').should('have.value', '1')
     cy.get('#sp_amount').type('30.000')

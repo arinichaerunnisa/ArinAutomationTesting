@@ -4,13 +4,6 @@ describe('working with inputs with custom command', () => {
         cy.visit('http://zero.webappsecurity.com/login.html')
         cy.url().should('include', 'login.html')
 
-        cy.get('#user_login').clear()
-        cy.get('#user_login').type('username')
-        cy.get('input[name=user_password]').clear()
-        cy.get('input[name=user_password]').type('password')
-        cy.get('input[name=user_remember_me').check()
-        cy.get('input[name=user_remember_me').should('be.checked')
-
         cy.fixture("latihanuser").then(latihanuser => {
             const username = latihanuser.username
             const password = latihanuser.password
@@ -22,6 +15,8 @@ describe('working with inputs with custom command', () => {
             cy.url().should('include', 'pay-bills.html')
             cy.get('#pay_bills_tab').click()
             cy.get('.board-header').should('have.text', 'Make payments to your saved payees')
+            
+            
             
             cy.get('.span4').should('have.value', 'sprint')
             cy.get('#sp_account').should('have.value', '1')
@@ -36,7 +31,7 @@ describe('working with inputs with custom command', () => {
 
 
 
-    });
+    })
     
     
         
