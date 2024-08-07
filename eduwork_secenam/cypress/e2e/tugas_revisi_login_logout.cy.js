@@ -58,6 +58,9 @@ describe('Login/Logout test', () => {
         cy.get('.dropdown-toggle').last().click()
         cy.get('#logout_link').click()
         cy.get('.brand').should('contain.text', 'Zero Bank')
+        cy.get('#signin_button').should('have.class', 'signin btn btn-info')
+        
+        
     
     })
     
