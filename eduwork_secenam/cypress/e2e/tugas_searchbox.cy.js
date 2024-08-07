@@ -5,14 +5,15 @@ describe('searchbox_test', ()=> {
         cy.visit('http://zero.webappsecurity.com/index.html')
         })
 
-    it.only('should type into searchbox and submit', () =>{
+    it('should type into searchbox and submit', () =>{
         cy.get('[id= searchTerm]').type('online{enter}')
-
+        cy.get('h2').contains('Search Results:')
 
     }) 
 
     it('should show search result page', () =>{
-        cy.get('h2').contains('Search Results:')
+        
+        cy.get('.top_offset').should('have.text', 'Online')
 
 
     })

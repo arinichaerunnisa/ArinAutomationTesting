@@ -6,6 +6,6 @@ describe('template spec', () => {
           cy.get('password').type("secret_sauce");
           cy.get('#login-button').click()
           cy.url().should('contains', 'inventory');
-          cy.get('span[data-test=title').should('have.text', 'product');
+          cy.get('span[data-test=title]').should('have.text', 'product');
     })
   })

@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe('Login/Logout test', () => {
-    // to do 
+    
 })
 
 it('Negative Scenario; Failed Login', () => {
