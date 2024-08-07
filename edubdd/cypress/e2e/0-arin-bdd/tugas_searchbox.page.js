@@ -7,7 +7,7 @@ const SUBMIT = 'name=submit';
 const SEARCHBOX = 'id= searchTerm';
 
 
-class Searchbox {
+class SearchBox {
     static visit(){
         cy.visit(URL);
     }

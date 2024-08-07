@@ -12,8 +12,7 @@ describe('searchbox_test', ()=> {
     }) 
 
     it('should show search result page', () =>{
-        
-        cy.get('.top_offset').should('have.text', 'Online')
+        cy.get('#text').contains('The following pages were found for the query: online')
 
 
     })

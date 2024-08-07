@@ -19,5 +19,7 @@ When ('I type the keyword', () => {
 })
 
 Then ('I should see the result', () => {
-    cy.get('.top_offset').should('be.visible')
+    cy.get('a[href="/online-banking.html"]').contains('Online')
+    cy.get('a[href="/bank/online-statements.html"]').contains('Online')
+    cy.get('.top_offset').contains('Online')
 })
