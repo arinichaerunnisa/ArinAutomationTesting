@@ -1,0 +1,10 @@
+describe('Validate Header', () => {
+    it('Succesfully Validate Header Content-Type', () => {
+        cy.request('https://pokeapi.co/api/v2/pokemon/ditto').as('pokemon')
+        cy.get('@pokemon').its('headers').its('content-type')
+            .should('include', 'application/json; charset=utf-8')
+            
+    })
+})
+
+
