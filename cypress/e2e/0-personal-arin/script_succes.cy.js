@@ -22,7 +22,7 @@ describe('working with inputs', () => {
 
     it('should try to login and do payment', () => {
         cy.visit('http://zero.webappsecurity.com/login.html')
-        cy.fixture("latihanuser").then(user => {
+        cy.fixture("user").then(user => {
             const username = user.username
             const password = user.password
             cy.login(username, password)

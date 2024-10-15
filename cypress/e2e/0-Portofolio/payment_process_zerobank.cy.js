@@ -1,26 +1,6 @@
-/// <reference types="cypress" /> 
-describe('working with inputs', () => {
-    it('visit the website', () => {
-        cy.visit('http://zero.webappsecurity.com/login.html')
-        cy.url().should('include', 'login.html')
-    });
-    it('should fill username', () => {
-        cy.visit('http://zero.webappsecurity.com/login.html')
-        cy.get('#user_login').clear()
-        cy.get('#user_login').type('username')
-    })
-    it('should fill password', () => {
-        cy.visit('http://zero.webappsecurity.com/login.html')
-        cy.get('input[name=user_password]').clear()
-        cy.get('input[name=user_password]').type('password')
-    })
-    it('should activate checkbox keep me signed in', () => {
-        cy.visit('http://zero.webappsecurity.com/login.html')
-        cy.get('input[name=user_remember_me').check()
-        cy.get('input[name=user_remember_me').should('be.checked')
-    })
-
-    it('should try to login and do payment', () => {
+// <reference types="cypress" /> 
+describe('Payment Process', () => {
+    it('should load the payment and input valid credentials', () => {
         cy.visit('http://zero.webappsecurity.com/login.html')
         cy.fixture("user").then(latihanuser => {
             const username = latihanuser.username
@@ -43,12 +23,6 @@ describe('working with inputs', () => {
 
             cy.get('#pay_saved_payees').click()
             cy.get('span[title="$ 30.000 payed to payee sprint"]').should('have.text', 'The payment was successfully submitted.')
-
-
         })
-        })
-
-       
-
-    
+    })
 })
